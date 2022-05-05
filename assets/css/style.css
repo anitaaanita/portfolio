@@ -1,10 +1,10 @@
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  color: #4a253d;
 }
 
 a {
-  color: #7c365f;
+  color: #4a253d;
   text-decoration: none;
 }
 
@@ -16,6 +16,30 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
+
+.gradient__bg {
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -54,13 +78,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
-  background: rgba(55, 64, 85, 0.9);
 }
 #header.header-transparent {
   background: transparent;
 }
 #header.header-scrolled {
-  background: rgba(247, 218, 146, 0.9);
+  background: rgba(182, 96, 171, 0.9);
   padding: 15px 0;
 }
 #header .logo {
@@ -109,12 +132,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
 }
 .navbar a i, .navbar a:focus i {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 0;
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #a8313b;
+  color: #4d0936;
 }
 .navbar .dropdown ul {
   display: block;
@@ -276,7 +299,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .container {
   text-align: center;
-  padding-top: 50px;
+  bottom: 20%;
 }
 @media (max-width: 992px) {
   #hero .container {
@@ -288,10 +311,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: #4a253d;
 }
 #hero h2 {
-  color: #eee;
+  color: #732857;
   margin: 15px 0 0 0;
   font-size: 22px;
 }
@@ -330,6 +353,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 24px;
   }
 }
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
 
 .animation-area {
   overflow-y: hidden;
@@ -338,7 +364,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#F3BADB), to(#F6D19C));
   background-image: linear-gradient(#F3BADB, #F6D19C);
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -355,39 +381,44 @@ h1, h2, h3, h4, h5, h6 {
 
 #cloud-one {
   width: 20%;
-  bottom: 40%;
+  bottom: 30%;
   left: 75%;
 }
 
 #cloud-two {
   width: 25%;
-  bottom: 77%;
+  bottom: 70%;
   left: 75%;
 }
 
 #cloud-three {
-  width: 20%;
-  bottom: 50%;
-  left: 3%;
+  width: 25%;
+  bottom: 40%;
+  left: 10%;
 }
 
 #cloud-four {
   width: 30%;
-  bottom: 76%;
+  bottom: 72%;
   margin-right: 40%;
-  left: 1%;
+  left: 3%;
 }
 
 #cloud-five {
   width: 15%;
-  bottom: 56%;
-  left: 60%;
+  bottom: 50%;
+  left: 65%;
 }
 
 #air-balloon {
-  width: 10%;
+  width: 8%;
   bottom: 10%;
 }
+
+#mountains {
+  height: 40%;
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -418,7 +449,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #ffc107;
+  background: #7c365f;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -485,10 +516,14 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background-color: #fbd9c6;
+}
+
 .about h3 {
   font-weight: 700;
-  font-size: 34px;
-  color: #414c64;
+  font-size: 20px;
+  color: #7d1b6b;
 }
 .about h4 {
   font-size: 20px;
@@ -502,7 +537,7 @@ section {
 }
 .about p {
   font-size: 15px;
-  color: #848484;
+  color: #4a253d;
 }
 
 
@@ -511,6 +546,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio {
+  background-color: #f7e4c8;
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;
@@ -525,7 +564,7 @@ section {
   font-size: 14px;
   font-weight: 500;
   line-height: 1;
-  color: #444444;
+  color: #4a253d;
   margin: 0 3px 10px 3px;
   transition: all ease-in-out 0.3s;
   background: #fafafc;
@@ -533,7 +572,7 @@ section {
 }
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #414c64;
-  background: #ffc107;
+  background: #F3BADB;
 }
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
@@ -555,7 +594,7 @@ section {
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: #ffc107;
+  background: #ebb450;
   padding: 15px 20px;
 }
 .portfolio .portfolio-item .portfolio-info h4 {
@@ -593,6 +632,8 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
+
+
 .portfolio-details {
   padding-top: 40px;
 }
@@ -642,5 +683,16 @@ section {
 }
 .portfolio-details .portfolio-description p {
   padding: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer {
+  color: #414c64;
+  font-size: 14px;
+  background: #F3BADB;
+  text-align: center;
 }
 

@@ -1,9 +1,3 @@
-/**
-* Template Name: Baker - v4.7.0
-* Template URL: https://bootstrapmade.com/baker-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -18,6 +12,7 @@
       return document.querySelector(el)
     }
   }
+
 
   /**
    * Easy event listener function
@@ -158,34 +153,6 @@
     }
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
 
   /**
    * Porfolio isotope and filter
@@ -215,6 +182,7 @@
     }
 
   });
+
 
   /**
    * Initiate portfolio lightbox 
@@ -248,5 +216,36 @@
       clickable: true
     }
   });
+
+/**
+   * Animation
+   */
+  const balloon = document.getElementById('air-balloon')
+  const cloudOne = document.getElementById('cloud-one')
+  const cloudTwo = document.getElementById('cloud-two')
+  const cloudThree = document.getElementById('cloud-three')
+  const cloudFour = document.getElementById('cloud-four')
+  const cloudFive = document.getElementById('cloud-five')
+  
+  function move(){
+      const incrementer = window.scrollY
+  
+      // "10" refers to height from the bottom of sky section in scss file
+      balloon.style.bottom = 10 + incrementer * 0.1 + '%'
+  
+      cloudOne.style.bottom = 30 + incrementer * 0.12 + '%'
+      cloudOne.style.left = 75 + incrementer * 0.1 + '%'
+      cloudTwo.style.bottom = 70 + incrementer * 0.14 + '%'
+      cloudTwo.style.left = 75 + incrementer * 0.15 + '%'
+      cloudThree.style.bottom = 40 + incrementer * 0.1 + '%'
+      cloudThree.style.left = 10 + incrementer * -0.12 + '%'
+      cloudFour.style.bottom = 72 + incrementer * 0.16 + '%'
+      cloudFour.style.left = 3 + incrementer * -0.15 + '%'
+      cloudFive.style.bottom = 50 + incrementer * 0.2 + '%'
+      cloudFive.style.left = 65 + incrementer * 0.16 + '%'
+  
+  }
+  
+  window.addEventListener('scroll', move)
 
 })()
